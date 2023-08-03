@@ -1,0 +1,26 @@
+{
+  "name": "cypress-project-demo",
+  "version": "1.0.0",
+  "description": "Cypress-automation-framework",
+  "main": "index.js",
+  "scripts": {
+    "triggerAllTests-headless": "npx cypress run",
+    "triggerTests-qa-env": "npx cypress run --env ENV=qa",
+    "triggerTests-staging-env": "npx cypress run --env ENV='staging' --spec 'cypress/e2e/002_health_care_makeAppointment.js'"
+  },
+  "keywords": [
+    "cypress",
+    "javascript",
+    "typescript",
+    "test"
+  ],
+  "author": "Trang Tr",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.3.0",
+    "cypress-real-events": "^1.7.6"
+  },
+  "dependencies": {
+    "npx": "^10.2.2"
+  }
+}

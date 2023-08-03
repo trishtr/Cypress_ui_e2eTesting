@@ -1,0 +1,6 @@
+{
+  "valid_username": "John Doe",
+  "valid_pwd": "ThisIsNotAPassword",
+  "invalid_username": "John Doe A",
+  "invalid_pwd": "wrongPwd"
+}

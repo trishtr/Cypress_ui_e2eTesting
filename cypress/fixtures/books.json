@@ -1,0 +1,17 @@
+{
+  "bookTitle": [
+    "Computing and Internet",
+    "Copy of Computing and Internet EX",
+    "Fiction",
+    "Fiction EX",
+    "Health Book",
+    "Science"
+  ],
+  "bookList": [
+    { "bookName": "A002", "bookPrice": 23 },
+    {
+      "bookName": "A001",
+      "bookPrice": 24
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "reg": "Register",
+  "reg_linktxt": "register",
+  "login": "Log in",
+  "login_linktxt": "login",
+  "shoppingCart": "Shopping cart",
+  "cart_linktxt": "cart",
+  "wishlist": "Wishlist",
+  "wishlist_txt": "wishlist"
+}
