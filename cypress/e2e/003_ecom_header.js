@@ -1,10 +1,10 @@
 /// <reference types = "Cypress"/>
 
-import HomePage from "../pageObjects/HomePage";
+import Header from "../pageObjects/Header";
 import Utility from "../support/utility";
 
 describe("Validate Header Element", () => {
-  const homePage = new HomePage();
+  const header = new Header();
   const utility = new Utility();
   const url = utility.getBaseUrl();
 
@@ -18,12 +18,9 @@ describe("Validate Header Element", () => {
   });
 
   it("Validate header links", () => {
-    homePage.clickHeaderLinksAndValiateUrl(data.reg, data.reg_linktxt);
-    homePage.clickHeaderLinksAndValiateUrl(
-      data.shoppingCart,
-      data.cart_linktxt
-    );
-    homePage.clickHeaderLinksAndValiateUrl(data.login, data.login_linktxt);
-    homePage.clickHeaderLinksAndValiateUrl(data.wishlist, data.wishlist_txt);
+    header.clickHeaderLinksAndValiateUrl(data.reg, data.reg_linktxt);
+    header.clickHeaderLinksAndValiateUrl(data.shoppingCart, data.cart_linktxt);
+    header.clickHeaderLinksAndValiateUrl(data.login, data.login_linktxt);
+    header.clickHeaderLinksAndValiateUrl(data.wishlist, data.wishlist_txt);
   });
 });

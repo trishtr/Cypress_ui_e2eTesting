@@ -1,4 +1,4 @@
-class PageBody {
+class ProductDetailPage {
   getProductTitle() {
     return cy.get(".page-body .product-title");
   }
@@ -33,6 +33,16 @@ class PageBody {
   addProductToCart() {
     this.getAddCartBtnOnOverViewPage().click();
   }
+
+  getNotificationbar() {
+    return cy.get("#bar-notification");
+  }
+
+  getActualPriceForSpecificProduct(productTitle) {
+    if (productTitle.startsWith(this.getProductTitle)) {
+      return this.getProductActualPrice();
+    }
+  }
 }
 
-export default PageBody;
+export default ProductDetailPage;

@@ -1,4 +1,4 @@
-class HomePage {
+class Header {
   visitHomePage() {
     cy.visit(Cypress.env("ecommerce"));
   }
@@ -9,6 +9,13 @@ class HomePage {
   getCartQtyInShoppingCart() {
     return cy.get(".cart-qty");
   }
+
+  getQtyInText() {
+    cy.get(".cart-qty").then(($qty) => {
+      return $qty.text();
+    });
+  }
+
   clickOnHeaderLinks(desiredText) {
     cy.get(".header-links ul li a").each(($el) => {
       if ($el.text().startsWith(desiredText)) {
@@ -40,6 +47,11 @@ class HomePage {
   getHeaderSearchBtn() {
     return cy.get(".search-box form input[type='submit']");
   }
+
+  searchProduct(productTitle) {
+    this.getHeaderSearchInput().type(productTitle);
+    this.getHeaderSearchBtn().click();
+  }
 }
 
-export default HomePage;
+export default Header;
