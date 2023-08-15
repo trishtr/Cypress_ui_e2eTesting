@@ -10,17 +10,6 @@ class CartPage {
     return cy.get(".qty input");
   }
 
-  getQtyLst() {
-    const qtyLst = new Array();
-    this.getProductQty()
-      .each((qty) => {
-        qtyLst.push(cy.get(qty).invoke("attr", "value"));
-      })
-      .then(() => {
-        return qtyLst;
-      });
-  }
-
   getSubTotal() {
     return cy.get(".product-subtotal");
   }
@@ -32,9 +21,39 @@ class CartPage {
     });
     return subTotalLst;
   }
-
   getProductAttributes() {
     return cy.get(".cart-item-row .product").find(".attributes");
+  }
+
+  getUpdateShoppingCartBtn() {
+    return cy.get(".update-cart-button");
+  }
+
+  getContinueShoppingCartBtn() {
+    return cy.get(".continue-shopping-button");
+  }
+
+  selectCountryInput(country) {
+    cy.get(".country-input").select(country);
+  }
+
+  selectStateInput(state) {
+    cy.get(".state-input").select(state);
+  }
+
+  clickEstimateShippingBtn() {
+    cy.get(".estimate-shipping-button").click();
+  }
+
+  getShippingResutls() {
+    return cy.get(".shipping-results");
+  }
+
+  clickCheckoutBtn() {
+    cy.get("#checkout").click();
+  }
+  agreeOnTerms() {
+    cy.get("#termsofservice").check();
   }
 }
 export default CartPage;

@@ -39,11 +39,8 @@ describe("Validate Buying flow", () => {
   it("Validate customer could not add item without selecting required options", () => {
     categories.navigateToSubList(data.product_2.subsection);
     productDetail.navigateToProductOverView(data.product_2.name);
-
-    // computersOverview.mappingLabelAndSubLabel();
     computersOverview.selectDropdown("RAM", "16");
     computersOverview.selectRadioBtn("OS", "44");
-    // computersOverview.selectRadioBtn("HDD", "18");
     productDetail.addProductToCart();
     productDetail.getNotificationbar().contains("Please select");
   });

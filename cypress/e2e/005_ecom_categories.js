@@ -8,7 +8,7 @@ describe("Validate Categories Links", () => {
   const url = utility.getBaseUrl();
 
   beforeEach(() => {
-    cy.visit(url);
+    cy.visit(Cypress.env("ecommerce"));
   });
   it("validate categories links navigate to correct page", () => {
     categories.clickOnCatergoriesAndValidatePath("Books", "books");

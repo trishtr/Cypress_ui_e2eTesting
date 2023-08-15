@@ -34,7 +34,7 @@ describe("Validate shopping cart page", () => {
     cy.wrap(productNameLst).should("contain", data.product_1.name);
   });
 
-  it.only("validate total price", () => {
+  it("validate total price", () => {
     const expectedTotalLst = [];
 
     cy.get(".product-unit-price").each((unitPriceTd, index) => {
@@ -55,5 +55,43 @@ describe("Validate shopping cart page", () => {
     });
 
     cy.wrap(expectedTotalLst).should("deep.equal", cartPage.getSubTotalLst());
+  });
+
+  it("validate users can change product qty and update shopping cart ", () => {
+    cartPage.getProductQty().clear().type("4");
+    cartPage.getUpdateShoppingCartBtn().click();
+
+    cartPage.getProductName().each(($text, index) => {
+      if ($text.text() === data.product_1.name) {
+        cartPage
+          .getProductUnitPrice()
+          .eq(index)
+          .then(($price) => {
+            cartPage
+              .getProductQty()
+              .eq(index)
+              .invoke("val")
+              .then(($qty) => {
+                const pr = parseInt($price.text());
+                cy.log(pr);
+
+                const total = pr * $qty;
+                cy.log(total);
+
+                cartPage
+                  .getSubTotal()
+                  .eq(index)
+                  .then(($actualtotal) => {
+                    expect(total).to.be.eq(parseInt($actualtotal.text()));
+                  });
+              });
+          });
+      }
+    });
+  });
+
+  it.only("validate users can click on continue shopping btn", () => {
+    cartPage.getContinueShoppingCartBtn().click();
+    cy.url().should("include", "desktops");
   });
 });
