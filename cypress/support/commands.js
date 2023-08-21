@@ -63,3 +63,13 @@ Cypress.Commands.add("generateEmail", () => {
   const randomString = Math.random().toString(36).substring(7);
   return `testemail+${randomString}@example.com`;
 });
+
+Cypress.Commands.add("generateString", () => {
+  const randomString = Math.random().toString(36).substring(7);
+  return randomString;
+});
+
+Cypress.Commands.add("generateNum", () => {
+  const randomNum = 100000 + Math.random() * 900000;
+  return randomNum;
+});

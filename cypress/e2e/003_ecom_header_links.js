@@ -14,7 +14,7 @@ describe("Validate Header Element", () => {
     });
   });
   beforeEach(() => {
-    cy.visit(url);
+    cy.visit(Cypress.env("ecommerce"));
   });
 
   it("Validate header links", () => {

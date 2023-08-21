@@ -55,5 +55,9 @@ class CartPage {
   agreeOnTerms() {
     cy.get("#termsofservice").check();
   }
+
+  clickOnCheckoutAsGuestBtn() {
+    cy.get(".checkout-as-guest-button").click();
+  }
 }
 export default CartPage;
