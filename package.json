@@ -6,7 +6,12 @@
   "scripts": {
     "triggerAllTests-headless": "npx cypress run",
     "triggerTests-qa-env": "npx cypress run --env ENV=qa",
-    "triggerTests-staging-env": "npx cypress run --env ENV='staging' --spec 'cypress/e2e/002_health_care_makeAppointment.js'"
+    "triggerTests-staging-env": "npx cypress run --env ENV='staging' --spec 'cypress/e2e/healthCareTests/*'",
+    "triggerEcomTests": "npx cypress run --spec 'cypress/e2e/EcommerceTests/*'",
+    "junit-merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/results.xml",
+    "delete-junit-report": "rm -rf cypress/results/junit/results.xml",
+    "delete-results": "rm -rf cypress/results/* || true",
+    "cypress-regression-pack": "npm run delete-results && npm run delete-junit-report && npm run triggerTests-staging-env && npm run junit-merge"
   },
   "keywords": [
     "cypress",
@@ -18,7 +23,9 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^12.3.0",
-    "cypress-real-events": "^1.7.6"
+    "cypress-multi-reporters": "^1.6.3",
+    "cypress-real-events": "^1.7.6",
+    "mocha-junit-reporter": "^2.2.1"
   },
   "dependencies": {
     "npx": "^10.2.2"

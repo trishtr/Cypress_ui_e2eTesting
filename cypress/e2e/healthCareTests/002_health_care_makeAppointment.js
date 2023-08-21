@@ -1,5 +1,5 @@
 /// <reference types = 'Cypress'/>
-import Utility from "../support/utility";
+import Utility from "../../support/utility";
 
 describe("Validate make appointment feature", () => {
   const utility = new Utility();
@@ -14,8 +14,8 @@ describe("Validate make appointment feature", () => {
   });
 
   it("validate make appointment feature", () => {
-    // cy.visit(url);
-    cy.visit(Cypress.env("healthcare"));
+    cy.visit(url);
+    // cy.visit(Cypress.env("healthcare"));
     cy.get("#btn-make-appointment").click();
     cy.user_login(data.valid_username, data.valid_pwd);
     cy.get("#combo_facility").select("Tokyo CURA Healthcare Center");

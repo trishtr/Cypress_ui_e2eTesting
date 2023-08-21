@@ -1,9 +1,9 @@
 ///<reference types = 'Cypress'/>
-import CartPage from "../pageObjects/CartPage";
-import Header from "../pageObjects/Header";
-import Categories from "../pageObjects/Categories";
-import ProductDetailPage from "../pageObjects/ProductDetailPage";
-import Checkout from "../pageObjects/Checkout";
+import CartPage from "../../pageObjects/CartPage";
+import Header from "../../pageObjects/Header";
+import Categories from "../../pageObjects/Categories";
+import ProductDetailPage from "../../pageObjects/ProductDetailPage";
+import Checkout from "../../pageObjects/Checkout";
 
 describe("Validate confirm order feature", () => {
   const cartPage = new CartPage();

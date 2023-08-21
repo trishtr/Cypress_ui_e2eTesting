@@ -1,5 +1,5 @@
 /// <reference types = 'cypress'/>
-import Utility from "../support/utility";
+import Utility from "../../support/utility";
 describe("Validate Login function", () => {
   const utility = new Utility();
   const url = utility.getBaseUrl();

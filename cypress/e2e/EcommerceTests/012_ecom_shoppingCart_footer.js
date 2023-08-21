@@ -1,8 +1,8 @@
 /// <reference types = 'Cypress'/>
-import CartPage from "../pageObjects/CartPage";
-import Header from "../pageObjects/Header";
-import Categories from "../pageObjects/Categories";
-import ProductDetailPage from "../pageObjects/ProductDetailPage";
+import CartPage from "../../pageObjects/CartPage";
+import Header from "../../pageObjects/Header";
+import Categories from "../../pageObjects/Categories";
+import ProductDetailPage from "../../pageObjects/ProductDetailPage";
 
 describe("validate shoppingcart footer", () => {
   const cartPage = new CartPage();

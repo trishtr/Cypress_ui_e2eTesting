@@ -1,7 +1,7 @@
 /// <reference types = 'Cypress'/>
-import Categories from "../pageObjects/Categories";
-import ProductDetailPage from "../pageObjects/ProductDetailPage";
-import ComputersOverview from "../pageObjects/ComputersOverview";
+import Categories from "../../pageObjects/Categories";
+import ProductDetailPage from "../../pageObjects/ProductDetailPage";
+import ComputersOverview from "../../pageObjects/ComputersOverview";
 
 describe("Validate Buying flow", () => {
   const categories = new Categories();

@@ -1,6 +1,6 @@
 ///<reference types = 'Cypress'/>
-import Header from "../pageObjects/Header";
-import SearchPage from "../pageObjects/SearchPage";
+import Header from "../../pageObjects/Header";
+import SearchPage from "../../pageObjects/SearchPage";
 
 describe("validate search function in headers", () => {
   const header = new Header();

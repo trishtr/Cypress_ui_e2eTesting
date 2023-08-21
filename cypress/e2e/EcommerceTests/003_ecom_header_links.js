@@ -1,7 +1,7 @@
 /// <reference types = "Cypress"/>
 
-import Header from "../pageObjects/Header";
-import Utility from "../support/utility";
+import Header from "../../pageObjects/Header";
+import Utility from "../../support/utility";
 
 describe("Validate Header Element", () => {
   const header = new Header();

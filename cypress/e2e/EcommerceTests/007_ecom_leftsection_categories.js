@@ -1,7 +1,7 @@
 ///<reference types = "Cypress"/>
 
-import Categories from "../pageObjects/Categories";
-import Utility from "../support/utility";
+import Categories from "../../pageObjects/Categories";
+import Utility from "../../support/utility";
 describe("Validate Categories Links", () => {
   const categories = new Categories();
   const utility = new Utility();

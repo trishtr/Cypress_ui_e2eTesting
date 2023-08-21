@@ -13,6 +13,10 @@ module.exports = defineConfig({
     screenshotOnRunFailure: true,
     viewportHeight: 1080,
     viewportWidth: 1920,
+    reporter: "cypress-multi-reporters",
+    reporterOptions: {
+      configFile: "reporter-config.json",
+    },
     env: {
       ecommerce: "https://demowebshop.tricentis.com/",
       healthcare: "https://katalon-demo-cura.herokuapp.com/",

@@ -1,6 +1,6 @@
 /// <reference types = "Cypress"/>
 
-import Footer from "../pageObjects/Footer";
+import Footer from "../../pageObjects/Footer";
 
 describe("Validate Customer Service Footer", () => {
   const footer = new Footer();

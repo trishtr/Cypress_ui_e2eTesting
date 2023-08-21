@@ -1,9 +1,9 @@
 ///<reference types = 'Cypress'/>
 
-import ProductionSelectors from "../pageObjects/ProductionSelectors";
+import ProductionSelectors from "../../pageObjects/ProductionSelectors";
 
-import Categories from "../pageObjects/Categories";
-import Utility from "../support/utility";
+import Categories from "../../pageObjects/Categories";
+import Utility from "../../support/utility";
 
 describe("Validate Production Selectors section", () => {
   const productionSelector = new ProductionSelectors();

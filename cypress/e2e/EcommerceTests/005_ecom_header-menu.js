@@ -1,6 +1,6 @@
 /// <reference types = 'Cypress'/>
 
-import HeaderMenu from "../pageObjects/HeaderMenu";
+import HeaderMenu from "../../pageObjects/HeaderMenu";
 describe("validate header-menu", () => {
   const headerMenu = new HeaderMenu();
 
